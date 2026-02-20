@@ -6,5 +6,5 @@ router = DefaultRouter()
 router.register(r'items', views.TableItemViewSet, basename='tableitem')
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),  # Убрали 'api/' отсюда!
 ]
