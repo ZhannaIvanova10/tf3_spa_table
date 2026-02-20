@@ -34,3 +34,4 @@ local_settings.py
 media/
 staticfiles/
 static/
+tf3_spa_table/
