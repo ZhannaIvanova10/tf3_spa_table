@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
@@ -17,6 +17,6 @@ urlpatterns = [
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     
-    # Главная страница
-    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    # React маршруты - ВАЖНО: этот маршрут должен быть ПОСЛЕДНИМ
+    re_path(r'^.*$', TemplateView.as_view(template_name='index.html'), name='home'),
 ]
