@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPA Table - Дипломная презентация</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 40px; 
+            background: #f0f2f5; 
+        }
+        .slide { 
+            background: white; 
+            padding: 40px; 
+            margin: 30px 0; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        }
+        h1 { 
+            color: #2c3e50; 
+            font-size: 2.5em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 { 
+            color: #3498db; 
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+        h3 {
+            color: #2c3e50;
+            font-size: 1.3em;
+        }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            margin: 15px 0;
+        }
+        td, th { 
+            border: 1px solid #ddd; 
+            padding: 12px; 
+            text-align: left; 
+        }
+        th { 
+            background: #3498db; 
+            color: white; 
+        }
+        .badge { 
+            background: #27ae60; 
+            color: white; 
+            padding: 5px 15px; 
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+        }
+        .badge-blue {
+            background: #3498db;
+        }
+        .badge-orange {
+            background: #e67e22;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .stat-item {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .stat-label {
+            color: #7f8c8d;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .tech-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .screenshot-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .screenshot-item img {
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 SPA Table Application</h1>
+    <p style="font-size: 1.2em; color: #7f8c8d;">Дипломный проект - Жанна Иванова</p>
+    
+    <!-- Слайд 1: Проблема и решение -->
+    <div class="slide">
+        <h2>🎯 Проблема и решение</h2>
+        <div style="display: flex; gap: 30px;">
+            <div style="flex: 1;">
+                <h3 style="color: #e74c3c;">Проблема:</h3>
+                <ul>
+                    <li>Нет удобного инструмента для управления данными</li>
+                    <li>Отсутствие интерактивности в стандартных решениях</li>
+                    <li>Сложность интеграции с другими сервисами</li>
+                </ul>
+            </div>
+            <div style="flex: 1;">
+                <h3 style="color: #27ae60;">Решение:</h3>
+                <ul>
+                    <li>SPA приложение с REST API</li>
+                    <li>Интерактивный интерфейс без перезагрузки</li>
+                    <li>Готовое API для интеграции</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Слайд 2: Ключевая функциональность -->
+    <div class="slide">
+        <h2>🚀 Ключевая функциональность</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label">API эндпоинтов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">17</div>
+                <div class="stat-label">тестов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">75%</div>
+                <div class="stat-label">покрытие</div>
+            </div>
+        </div>
+        <ul style="columns: 2;">
+            <li>✅ CRUD операции</li>
+            <li>✅ Фильтрация по статусу</li>
+            <li>✅ Поиск по тексту</li>
+            <li>✅ JWT авторизация</li>
+            <li>✅ CSV экспорт</li>
+            <li>✅ Swagger документация</li>
+            <li>✅ Статистика в реальном времени</li>
+            <li>✅ Docker поддержка</li>
+        </ul>
+    </div>
+
+    <!-- Слайд 3: Технологический стек -->
+    <div class="slide">
+        <h2>🛠 Технологический стек</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <strong>Backend</strong><br>
+                Python 3.13<br>
+                Django 6.0.2<br>
+                Django REST Framework
+            </div>
+            <div class="tech-item">
+                <strong>Database</strong><br>
+                PostgreSQL<br>
+                SQLite (dev)<br>
+                Django ORM
+            </div>
+            <div class="tech-item">
+                <strong>Auth</strong><br>
+                JWT токены<br>
+                SimpleJWT<br>
+                Bearer auth
+            </div>
+            <div class="tech-item">
+                <strong>Frontend</strong><br>
+                Bootstrap 5<br>
+                JavaScript ES6+<br>
+                Font Awesome
+            </div>
+            <div class="tech-item">
+                <strong>API Docs</strong><br>
+                Swagger UI<br>
+                OpenAPI 3.0<br>
+                ReDoc
+            </div>
+            <div class="tech-item">
+                <strong>DevOps</strong><br>
+                Docker<br>
+                Docker Compose<br>
+                nginx
+            </div>
+        </div>
+    </div>
+
+    <!-- Слайд 4: Архитектура проекта -->
+    <div class="slide">
+        <h2>🏗 Архитектура проекта</h2>
+        <pre style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+Клиент (Браузер) 
+    ↓
+Django Templates (SPA)
+    ↓
+REST API (DRF ViewSets)
+    ↓
+Сериализаторы (JSON)
+    ↓
+Models (ORM)
+    ↓
+PostgreSQL / SQLite</pre>
+        <p><strong>Принцип:</strong> MTV (Model-Template-View) с REST API</p>
+    </div>
+
+    <!-- Слайд 5: API Эндпоинты -->
+    <div class="slide">
+        <h2>🔌 API Эндпоинты</h2>
+        <table>
+            <tr><th>Метод</th><th>URL</th><th>Описание</th></tr>
+            <tr><td>GET</td><td>/api/items/</td><td>Список записей</td></tr>
+            <tr><td>POST</td><td>/api/items/</td><td>Создать запись</td></tr>
+            <tr><td>GET</td><td>/api/items/{id}/</td><td>Детали записи</td></tr>
+            <tr><td>PUT</td><td>/api/items/{id}/</td><td>Обновить запись</td></tr>
+            <tr><td>DELETE</td><td>/api/items/{id}/</td><td>Удалить запись</td></tr>
+            <tr><td>GET</td><td>/api/items/stats/</td><td>Статистика</td></tr>
+            <tr><td>GET</td><td>/api/items/export_csv/</td><td>CSV экспорт</td></tr>
+            <tr><td>POST</td><td>/api/token/</td><td>Получить JWT токен</td></tr>
+        </table>
+        <p style="margin-top: 15px;">
+            <span class="badge">?status=new</span> Фильтрация
+            <span class="badge badge-blue">?search=текст</span> Поиск
+            <span class="badge badge-orange">?ordering=title</span> Сортировка
+        </p>
+    </div>
+
+    <!-- Слайд 6: Результаты тестирования -->
+    <div class="slide">
+        <h2>🧪 Результаты тестирования</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">17</div>
+                <div class="stat-label">тестов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">>75%</div>
+                <div class="stat-label">покрытие</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">успешно</div>
+            </div>
+        </div>
+        <p><strong>Проверено:</strong> CRUD, фильтрация, поиск, JWT, статистика, CSV экспорт</p>
+        <p><span class="badge">✅ Все тесты пройдены</span></p>
+    </div>
+
+    <!-- Слайд 7: Бизнес-ценность (STAR) -->
+    <div class="slide">
+        <h2>💰 Бизнес-ценность</h2>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <p><strong>S (Ситуация):</strong> Компаниям нужен простой инструмент для управления данными</p>
+            <p><strong>T (Задача):</strong> Создать доступное и удобное решение</p>
+            <p><strong>A (Действия):</strong> Разработано SPA приложение с REST API</p>
+            <p><strong>R (Результаты):</strong></p>
+            <ul>
+                <li>⏱ Сокращение времени: с 30 мин до 3 мин в день (90% экономии)</li>
+                <li>💰 Экономия ~50,000 руб/год на лицензиях</li>
+                <li>📊 7 активных пользователей за неделю</li>
+                <li>🔄 Автоматизация экономит 10 часов в неделю</li>
+                <li>🔌 Готовое API для интеграции</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Слайд 8: Скриншоты приложения -->
+    <div class="slide">
+        <h2>📸 Скриншоты приложения</h2>
+        
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <h3>Главная страница с таблицей</h3>
+                <img src="screenshots/Снимок экрана (1).png" alt="Главная страница">
+                <p><em>7 записей с разными статусами</em></p>
+            </div>
+            <div class="screenshot-item">
+                <h3>Swagger документация</h3>
+                <img src="screenshots/Снимок экрана (4).png" alt="Swagger UI">
+                <p><em>Интерактивная документация API</em></p>
+            </div>
+        </div>
+        
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <h3>Статистика API</h3>
+                <img src="screenshots/Снимок экрана (5).png" alt="Статистика">
+                <p><em>JSON с данными по статусам</em></p>
+            </div>
+            <div class="screenshot-item">
+                <h3>Детальная статистика</h3>
+                <img src="screenshots/Снимок экрана (6).png" alt="Статистика детально">
+                <p><em>total: 7, new: 2, in_progress: 2, completed: 2, cancelled: 1</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Слайд 9: Демонстрация -->
+    <div class="slide">
+        <h2>🎥 Демонстрация</h2>
+        <p><strong>Главная страница:</strong> <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
+        <p><strong>Документация API:</strong> <a href="http://127.0.0.1:8000/api/docs/" target="_blank">http://127.0.0.1:8000/api/docs/</a></p>
+        <p><strong>Статистика:</strong> <a href="http://127.0.0.1:8000/api/items/stats/" target="_blank">http://127.0.0.1:8000/api/items/stats/</a></p>
+        <p><strong>CSV экспорт:</strong> <a href="http://127.0.0.1:8000/api/items/export_csv/" target="_blank">http://127.0.0.1:8000/api/items/export_csv/</a></p>
+    </div>
+
+    <!-- Слайд 10: Заключение -->
+    <div class="slide">
+        <h2>📌 Заключение</h2>
+        <p><strong>✅ Что сделано:</strong></p>
+        <ul>
+            <li>Полноценное SPA приложение с 7 записями</li>
+            <li>REST API с JWT авторизацией (8 эндпоинтов)</li>
+            <li>17 тестов с покрытием >75%</li>
+            <li>Swagger документация</li>
+            <li>GitHub репозиторий</li>
+            <li>Docker поддержка</li>
+        </ul>
+        <p><strong>🚀 Планы:</strong> WebSocket, CI/CD, Excel export, графики</p>
+    </div>
+
+    <!-- Слайд 11: Вопросы и ответы -->
+    <div class="slide">
+        <h2>❓ Вопросы и ответы</h2>
+        
+        <p><strong>Почему Django?</strong><br>
+        Быстрая разработка, встроенная админка, ORM, безопасность "из коробки"</p>
+        
+        <p><strong>Как работает JWT?</strong><br>
+        Токен выдается при логине, хранится на клиенте, добавляется в заголовки</p>
+        
+        <p><strong>Сложности?</strong><br>
+        Настройка CORS, JWT авторизация, Docker на Windows</p>
+        
+        <p><strong>Где применить?</strong><br>
+        CRM системы, управление задачами, базы данных сотрудников</p>
+    </div>
+
+    <!-- Слайд 12: Ссылки -->
+    <div class="slide">
+        <h2>🔗 Ссылки</h2>
+        <p>GitHub: <a href="https://github.com/ZhannaIvanova10/tf3_spa_table" target="_blank">https://github.com/ZhannaIvanova10/tf3_spa_table</a></p>
+        <p>Документация: <a href="http://127.0.0.1:8000/api/docs/" target="_blank">http://127.0.0.1:8000/api/docs/</a></p>
+        <p>Демо: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
+        
+        <h1 style="text-align: center; margin-top: 40px;">🙏 Спасибо за внимание!</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.table-clickable th {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sort-indicator {
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+}
