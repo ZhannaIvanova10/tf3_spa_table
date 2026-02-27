@@ -1,0 +1,21 @@
+from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import include, path
+from django.views.generic import TemplateView
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
+import os
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('table.urls')),
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+]
+
+# Добавляем обслуживание статических файлов вручную
+if settings.DEBUG:
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+    urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
